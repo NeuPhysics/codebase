@@ -1,0 +1,265 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8338,        256]
+NotebookOptionsPosition[      7819,        233]
+NotebookOutlinePosition[      8180,        249]
+CellTagsIndexPosition[      8137,        246]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.651700642474407*^9, 3.651700644264173*^9}}],
+
+Cell[TextData[{
+ "I use ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    OverscriptBox["x", "_"], "=", 
+    RowBox[{"omega", " ", "x"}]}], TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " as variable x here. In other words, the x I am going to use is in fact \
+omega x."
+}], "Text",
+ CellChangeTimes->{{3.651701088241207*^9, 3.6517011067697983`*^9}, {
+  3.651701182288087*^9, 3.65170120020623*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"eqn", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{
+      RowBox[{"c2", "''"}], "[", "x", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "alpha", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"beta", " ", "x"}], "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", "thetav"}], "]"}]}], "+", 
+       RowBox[{"(", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "beta"}], " ", 
+          RowBox[{"Tan", "[", 
+           RowBox[{"2", "thetav"}], "]"}]}], " ", "+", " ", "I"}], " ", 
+        ")"}]}], ")"}], 
+     RowBox[{
+      RowBox[{"c2", "'"}], "[", "x", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        FractionBox["I", "2"], "alpha", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"beta", " ", "x"}], "]"}], " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", "thetav"}], "]"}], 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "beta"}], " ", 
+           RowBox[{"Tan", "[", 
+            RowBox[{"beta", " ", "x"}], "]"}]}], "+", "I"}], ")"}]}], "+", 
+       RowBox[{
+        FractionBox[
+         RowBox[{
+          RowBox[{"(", "alpha", ")"}], "^", "2"}], "4"], 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          RowBox[{"beta", " ", "x"}], "]"}], "^", "2"}], 
+        RowBox[{"Cos", "[", 
+         RowBox[{"4", "thetav"}], "]"}]}]}], ")"}], 
+     RowBox[{"c2", "[", "x", "]"}]}]}], "\[Equal]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.651697682240844*^9, 3.651697683258768*^9}, {
+   3.6516977317658367`*^9, 3.651697761203959*^9}, 3.65169831568956*^9, {
+   3.6516985377985563`*^9, 3.6516985928197813`*^9}, {3.6517004149035273`*^9, 
+   3.651700495425906*^9}, {3.651700556579406*^9, 3.6517005761496*^9}, 
+   3.65170103711668*^9, {3.6517010721095867`*^9, 3.651701083859085*^9}, {
+   3.6517011341537933`*^9, 3.651701168320418*^9}, {3.65170121140842*^9, 
+   3.6517012839571333`*^9}, {3.651878785827038*^9, 3.651878871977622*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"c2", "[", "x", "]"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       FractionBox["1", "4"], " ", 
+       SuperscriptBox["alpha", "2"], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"4", " ", "thetav"}], "]"}], " ", 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         RowBox[{"beta", " ", "x"}], "]"}], "2"]}], "+", 
+      RowBox[{
+       FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", "alpha", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "thetav"}], "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"beta", " ", "x"}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"\[ImaginaryI]", "-", 
+         RowBox[{"beta", " ", 
+          RowBox[{"Tan", "[", 
+           RowBox[{"beta", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}], "+", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"\[ImaginaryI]", "-", 
+      RowBox[{"\[ImaginaryI]", " ", "alpha", " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"2", " ", "thetav"}], "]"}], " ", 
+       RowBox[{"Cos", "[", 
+        RowBox[{"beta", " ", "x"}], "]"}]}], "-", 
+      RowBox[{"beta", " ", 
+       RowBox[{"Tan", "[", 
+        RowBox[{"2", " ", "thetav"}], "]"}]}]}], ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["c2", "\[Prime]",
+      MultilineFunction->None], "[", "x", "]"}]}], "-", 
+   RowBox[{
+    SuperscriptBox["c2", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "x", "]"}]}], "\[Equal]", "0"}]], "Output",\
+
+ CellChangeTimes->{3.6517004986181393`*^9, 3.651700579099596*^9, 
+  3.65170128475031*^9, 3.651701365989749*^9, 3.651702134443199*^9, 
+  3.6518788769804*^9, 3.6518789089744387`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{"eqn", "&&", 
+    RowBox[{
+     RowBox[{"c2", "[", "0", "]"}], "==", "0"}], "&&", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"c2", "'"}], "[", "0", "]"}], "\[Equal]", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"-", "I"}], "2"], "alpha", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "thetav"}], "]"}]}]}]}], ",", "c2", ",", "x"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.651697674605154*^9, 3.6516976808671503`*^9}, {
+  3.651700500641716*^9, 3.6517005061069107`*^9}, {3.651702086900549*^9, 
+  3.6517021250090733`*^9}, {3.651878890500967*^9, 3.6518788967232447`*^9}, {
+  3.651878930323605*^9, 3.6518789365720167`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"c2", "[", "x", "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          FractionBox["1", "4"], " ", 
+          SuperscriptBox["alpha", "2"], " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"4", " ", "thetav"}], "]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            RowBox[{"beta", " ", "x"}], "]"}], "2"]}], "+", 
+         RowBox[{
+          FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", "alpha", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "thetav"}], "]"}], " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"beta", " ", "x"}], "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[ImaginaryI]", "-", 
+            RowBox[{"beta", " ", 
+             RowBox[{"Tan", "[", 
+              RowBox[{"beta", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}]}], "+", 
+      
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"\[ImaginaryI]", "-", 
+         RowBox[{"\[ImaginaryI]", " ", "alpha", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "thetav"}], "]"}], " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"beta", " ", "x"}], "]"}]}], "-", 
+         RowBox[{"beta", " ", 
+          RowBox[{"Tan", "[", 
+           RowBox[{"2", " ", "thetav"}], "]"}]}]}], ")"}], " ", 
+       RowBox[{
+        SuperscriptBox["c2", "\[Prime]",
+         MultilineFunction->None], "[", "x", "]"}]}], "-", 
+      RowBox[{
+       SuperscriptBox["c2", "\[Prime]\[Prime]",
+        MultilineFunction->None], "[", "x", "]"}]}], "\[Equal]", "0"}], "&&", 
+    
+    RowBox[{
+     RowBox[{"c2", "[", "0", "]"}], "\[Equal]", "0"}], "&&", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["c2", "\[Prime]",
+       MultilineFunction->None], "[", "0", "]"}], "\[Equal]", 
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "2"]}], " ", "\[ImaginaryI]", " ", "alpha", " ", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", " ", "thetav"}], "]"}]}]}]}], ",", "c2", ",", "x"}], 
+  "]"}]], "Output",
+ CellChangeTimes->{
+  3.651700506810794*^9, 3.651700583451313*^9, 3.6517021300276127`*^9, {
+   3.6518789061374063`*^9, 3.651878928042491*^9}, 3.651879157283722*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 655},
+WindowMargins->{{-1433, Automatic}, {-51, Automatic}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 92, 1, 28, "Input"],
+Cell[653, 23, 401, 12, 32, "Text"],
+Cell[CellGroupData[{
+Cell[1079, 39, 2064, 56, 103, "Input"],
+Cell[3146, 97, 1664, 46, 103, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4847, 148, 692, 18, 47, "Input"],
+Cell[5542, 168, 2261, 62, 173, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
