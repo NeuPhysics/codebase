@@ -5,6 +5,29 @@ import numpy as np
 ## Define neutrino mixing matrix which brings the vacuum energy basis to flavor basis.
 
 
+# class par(object):
+    
+    
+    
+
+    
+def pauli_matrices(n):
+    """Pauli Matrices
+    
+    Usage:
+    * pauli_matrices(n)  is $\sigma_n$;
+    * n runs from 0 to 3, where pauli_matrices(0) is identity matrix."""
+    
+    if
+    
+    matrices = np.array([[ [[1,0], [0,1] ], [0,1],[1,0]], [[0,-1j],[1j,0]], [[1,0],[0,-1]] ])
+    
+    return matrices[n-1]
+    
+
+    
+    
+## Mixing Matrix for Two Flavor Oscillation
 
 def mixing2():  ### 2 flavor case with fixing mixing angles from recent results
     """neutrino mixing matrix with : from vacuum basis to flavor basis"""
@@ -19,13 +42,7 @@ def mix2(thetav):   ### 2 flavor case
     return np.array([[np.cos(2*thetav),np.sin(2*thetav)],[-np.sin(2*thetav),np.cos(2*thetav)]])
 
 
-def pauli_matrices(n):
-    """Pauli Matrices"""
-    
-    matrices = np.array([[ [0,1],[1,0]], [[0,-1j],[1j,0]], [[1,0],[0,-1]] ])
-    
-    return matrices[n-1]
-    
+
 
 class Neutrino(object):
     """
@@ -51,8 +68,41 @@ class Neutrino(object):
 
 
 
+class MSW(object):
+    """ MSW effect calculations
+    
+    Attributes:
+    energy: energy of the neutrino"""
+    
+    def __init__(self, energy):
+        self.energy = energy
 
+    def adiabatic_p(self, mixing_angle, lambdahat):
+        """ Survival probability of adiabatic evolution
+        
+        Attributes:
+        * mixing_angle: The mixing angle for two flavor oscillation;
+        * lambdahat: $\hat\lambda = \lambda/\omega$ where $\omega$ is the vacuum frequency."""
+        
+        theta = mixing_angle
+        cos2thetam =  ( np.cos(2*theta) - lambdahat ) /( np.sqrt( lambdahat**2 + 1 - 2*lambdahat*np.cos(2*theta) ) )
 
+        return (1 + np.cos(2*theta)*cos2thetam )/2
+    
+    def solar_landau_zener_p(self, mixing_angle, lambdahat):
+        """ Survival probability with Landau Zener transition
+        
+        Attributes:
+        * mixing_angle: The mixing angle for two flavor oscillation;
+        * lambdahat: $\hat\lambda = \lambda/\omega$ where $\omega$ is the vacuum frequency."""
+
+        theta = mixing_angle
+        cos2thetam =  ( np.cos(2*theta) - lambdahat  )/( np.sqrt( lambdahat**2 + 1 - 2*lambdahat*np.cos(2*theta) ) )
+        
+        gamma = (2.554*10**(3))*( (np.sin(2*theta) )**2 )/( lambdahat*np.cos(2*theta) )
+        pf = np.exp(-np.pi*gamma/2)
+        
+        return (1 + (1 - 2*pf)*np.cos(2*theta)*cos2thetam )/2
 
 
 
