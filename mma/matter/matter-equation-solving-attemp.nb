@@ -1,0 +1,184 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5152,        175]
+NotebookOptionsPosition[      4714,        154]
+NotebookOutlinePosition[      5069,        170]
+CellTagsIndexPosition[      5026,        167]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"eqn", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}], ",", "x"}], "]"}], 
+    "-", 
+    RowBox[{
+     RowBox[{"(", " ", 
+      RowBox[{
+       RowBox[{"a", " ", "k", " ", 
+        RowBox[{"Cot", "[", 
+         RowBox[{"k", " ", "x"}], "]"}]}], "+", 
+       RowBox[{"i", 
+        RowBox[{"(", 
+         RowBox[{"omegam", " ", "-", " ", 
+          RowBox[{"a", " ", 
+           RowBox[{"Sin", "[", 
+            RowBox[{"k", " ", "x"}], "]"}], 
+           RowBox[{"Cos", "[", 
+            RowBox[{"2", "thetam"}], "]"}]}]}], ")"}], " ", "a", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"k", " ", "x"}], "]"}]}]}], " ", ")"}], 
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", " ", "thetam"}], "]"}], "/", "2"}], ")"}], "^", "2"}], 
+     " ", 
+     RowBox[{"a", "^", "2"}], " ", 
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       RowBox[{"k", " ", "x"}], "]"}], "^", "2"}], " ", 
+     RowBox[{"f", "[", "x", "]"}]}]}], "\[Equal]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.6626719930626593`*^9, 3.6626720468343353`*^9}, {
+  3.6626720781545677`*^9, 3.6626721992058573`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "4"], " ", 
+    SuperscriptBox["a", "2"], " ", 
+    RowBox[{"f", "[", "x", "]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", " ", "thetam"}], "]"}], "2"], " ", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", 
+      RowBox[{"k", " ", "x"}], "]"}], "2"]}], "-", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"a", " ", "k", " ", 
+       RowBox[{"Cot", "[", 
+        RowBox[{"k", " ", "x"}], "]"}]}], "+", 
+      RowBox[{"a", " ", "i", " ", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"k", " ", "x"}], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{"omegam", "-", 
+         RowBox[{"a", " ", 
+          RowBox[{"Cos", "[", 
+           RowBox[{"2", " ", "thetam"}], "]"}], " ", 
+          RowBox[{"Sin", "[", 
+           RowBox[{"k", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}], " ", 
+    RowBox[{
+     SuperscriptBox["f", "\[Prime]",
+      MultilineFunction->None], "[", "x", "]"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["f", "\[Prime]\[Prime]",
+     MultilineFunction->None], "[", "x", "]"}]}], "\[Equal]", "0"}]], "Output",\
+
+ CellChangeTimes->{{3.6626721601484327`*^9, 3.662672165589202*^9}, 
+   3.6626722027512903`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{"eqn", ",", 
+   RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      FractionBox["1", "4"], " ", 
+      SuperscriptBox["a", "2"], " ", 
+      RowBox[{"f", "[", "x", "]"}], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        RowBox[{"2", " ", "thetam"}], "]"}], "2"], " ", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        RowBox[{"k", " ", "x"}], "]"}], "2"]}], "-", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"a", " ", "k", " ", 
+         RowBox[{"Cot", "[", 
+          RowBox[{"k", " ", "x"}], "]"}]}], "+", 
+        RowBox[{"a", " ", "i", " ", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"k", " ", "x"}], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{"omegam", "-", 
+           RowBox[{"a", " ", 
+            RowBox[{"Cos", "[", 
+             RowBox[{"2", " ", "thetam"}], "]"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"k", " ", "x"}], "]"}]}]}], ")"}]}]}], ")"}], " ", 
+      RowBox[{
+       SuperscriptBox["f", "\[Prime]",
+        MultilineFunction->None], "[", "x", "]"}]}], "+", 
+     RowBox[{
+      SuperscriptBox["f", "\[Prime]\[Prime]",
+       MultilineFunction->None], "[", "x", "]"}]}], "\[Equal]", "0"}], ",", 
+   RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]], "Output",
+ CellChangeTimes->{3.662672230800395*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 655},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1392, 42, 63, "Input"],
+Cell[1975, 66, 1227, 37, 65, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3239, 108, 123, 3, 28, "Input"],
+Cell[3365, 113, 1333, 38, 110, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
