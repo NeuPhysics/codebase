@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5152,        175]
-NotebookOptionsPosition[      4714,        154]
-NotebookOutlinePosition[      5069,        170]
-CellTagsIndexPosition[      5026,        167]
+NotebookDataLength[     22538,        691]
+NotebookOptionsPosition[     21610,        653]
+NotebookOutlinePosition[     22000,        670]
+CellTagsIndexPosition[     21957,        667]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -150,10 +150,510 @@ Cell[BoxData[
        MultilineFunction->None], "[", "x", "]"}]}], "\[Equal]", "0"}], ",", 
    RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]], "Output",
  CellChangeTimes->{3.662672230800395*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"f", "[", "x", "]"}], "+", 
+     RowBox[{"x", " ", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]}]}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"omegam", "/", "2"}], "-", 
+     RowBox[{
+      RowBox[{"deltalambda", "[", "x", "]"}], 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{"2", "thetam"}], "]"}], "/", "2"}]}]}]}], ",", 
+   RowBox[{"f", "[", "x", "]"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6628180661257133`*^9, 3.662818097767128*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"f", "[", "x", "]"}], "\[Rule]", 
+    RowBox[{
+     FractionBox[
+      RowBox[{"C", "[", "1", "]"}], "x"], "+", 
+     FractionBox[
+      RowBox[{
+       SubsuperscriptBox["\[Integral]", "1", "x"], 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"omegam", "-", 
+           RowBox[{
+            RowBox[{"deltalambda", "[", 
+             RowBox[{"K", "[", "1", "]"}], "]"}], " ", 
+            RowBox[{"Sin", "[", 
+             RowBox[{"2", " ", "thetam"}], "]"}]}]}], ")"}]}], 
+        RowBox[{"\[DifferentialD]", 
+         RowBox[{"K", "[", "1", "]"}]}]}]}], "x"]}]}], "}"}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.662818105533119*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"sys", "=", 
+  RowBox[{
+   RowBox[{"I", " ", 
+    RowBox[{"D", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"phi1", "[", "x", "]"}], ",", 
+        RowBox[{"phi2", "[", "x", "]"}]}], "}"}], ",", "x"}], "]"}]}], 
+   "\[Equal]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"g0R", "+", 
+           RowBox[{"I", " ", "g0I"}]}], ")"}], " ", 
+         RowBox[{"Exp", "[", 
+          RowBox[{"I", 
+           RowBox[{"(", 
+            RowBox[{"omegam", "+", 
+             RowBox[{"n0", " ", "k"}]}], ")"}], "x"}], "]"}]}]}], "}"}], ",", 
+      
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"g0R", "-", 
+           RowBox[{"I", " ", "g0I"}]}], ")"}], " ", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "I"}], 
+           RowBox[{"(", 
+            RowBox[{"omegam", "+", 
+             RowBox[{"n0", " ", "k"}]}], ")"}], "x"}], "]"}]}], ",", "0"}], 
+       "}"}]}], "}"}], ".", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"phi1", "[", "x", "]"}], ",", 
+      RowBox[{"phi2", "[", "x", "]"}]}], "}"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.662958907001377*^9, 3.66295892756066*^9}, {
+  3.662958969235578*^9, 3.6629589991603003`*^9}, {3.6629590342539*^9, 
+  3.662959062327342*^9}, {3.6629591195238247`*^9, 3.6629591690016947`*^9}, {
+  3.6629592219339*^9, 3.662959229288431*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\[ImaginaryI]", " ", 
+     RowBox[{
+      SuperscriptBox["phi1", "\[Prime]",
+       MultilineFunction->None], "[", "x", "]"}]}], ",", 
+    RowBox[{"\[ImaginaryI]", " ", 
+     RowBox[{
+      SuperscriptBox["phi2", "\[Prime]",
+       MultilineFunction->None], "[", "x", "]"}]}]}], "}"}], "\[Equal]", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{"\[ImaginaryI]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"\[ImaginaryI]", " ", "g0I"}], "+", "g0R"}], ")"}], " ", 
+     RowBox[{"phi2", "[", "x", "]"}]}], ",", 
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"-", "\[ImaginaryI]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "g0I"}], "+", "g0R"}], ")"}], 
+     " ", 
+     RowBox[{"phi1", "[", "x", "]"}]}]}], "}"}]}]], "Output",
+ CellChangeTimes->{3.662959231550256*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DSolve", "[", 
+  RowBox[{"sys", ",", 
+   RowBox[{"{", 
+    RowBox[{"phi1", ",", "phi2"}], "}"}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.662959233473789*^9, 3.662959238506991*^9}, {
+  3.6629636286529427`*^9, 3.662963633298894*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"phi1", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", "x", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "4"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["g0I", "2"], "+", 
+                   SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                 "2"]}]]}]}], ")"}], " ", "x"}]], " ", 
+         RowBox[{"C", "[", "1", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           FractionBox["1", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "4"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["g0I", "2"], "+", 
+                  SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}],
+             ")"}], " ", "x"}]], " ", 
+         RowBox[{"C", "[", "2", "]"}]}]}]}], "]"}]}], ",", 
+    RowBox[{"phi2", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", "x", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"g0I", "-", 
+             RowBox[{"\[ImaginaryI]", " ", "g0R"}]}], ")"}]}]], 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "\[ImaginaryI]"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+            "+", 
+            RowBox[{
+             FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "4"}], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["g0I", "2"], "+", 
+                    SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                   "2"]}]]}]}], ")"}], " ", "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "4"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["g0I", "2"], "+", 
+                  SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                "2"]}]]}]}], ")"}], " ", 
+          RowBox[{"C", "[", "1", "]"}]}]}], "+", 
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"g0I", "-", 
+             RowBox[{"\[ImaginaryI]", " ", "g0R"}]}], ")"}]}]], 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "\[ImaginaryI]"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+            "+", 
+            RowBox[{
+             FractionBox["1", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "4"}], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["g0I", "2"], "+", 
+                    SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                  "2"]}]]}], ")"}], " ", "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "4"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["g0I", "2"], "+", 
+                 SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}], 
+           ")"}], " ", 
+          RowBox[{"C", "[", "2", "]"}]}]}]}]}], "]"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.662963634775683*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"%", "//", "FullSimplify"}]], "Input",
+ CellChangeTimes->{{3.662964164494339*^9, 3.662964167081634*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"phi1", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", "x", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "4"}], " ", 
+                 RowBox[{"(", 
+                  RowBox[{
+                   SuperscriptBox["g0I", "2"], "+", 
+                   SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                SuperscriptBox[
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                 "2"]}]]}]}], ")"}], " ", "x"}]], " ", 
+         RowBox[{"C", "[", "1", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           FractionBox["1", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "4"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["g0I", "2"], "+", 
+                  SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}],
+             ")"}], " ", "x"}]], " ", 
+         RowBox[{"C", "[", "2", "]"}]}]}]}], "]"}]}], ",", 
+    RowBox[{"phi2", "\[Rule]", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", "x", "}"}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"g0I", "-", 
+             RowBox[{"\[ImaginaryI]", " ", "g0R"}]}], ")"}]}]], 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "\[ImaginaryI]"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+            "+", 
+            RowBox[{
+             FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "4"}], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    SuperscriptBox["g0I", "2"], "+", 
+                    SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                  SuperscriptBox[
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                   "2"]}]]}]}], ")"}], " ", "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "4"}], " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  SuperscriptBox["g0I", "2"], "+", 
+                  SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+               SuperscriptBox[
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                "2"]}]]}]}], ")"}], " ", 
+          RowBox[{"C", "[", "1", "]"}]}]}], "+", 
+        RowBox[{
+         FractionBox["1", 
+          RowBox[{"2", " ", 
+           RowBox[{"(", 
+            RowBox[{"g0I", "-", 
+             RowBox[{"\[ImaginaryI]", " ", "g0R"}]}], ")"}]}]], 
+         RowBox[{
+          SuperscriptBox["\[ExponentialE]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "\[ImaginaryI]"}], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+            "+", 
+            RowBox[{
+             FractionBox["1", "2"], " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "4"}], " ", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    SuperscriptBox["g0I", "2"], "+", 
+                    SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+                 SuperscriptBox[
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
+                  "2"]}]]}], ")"}], " ", "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "4"}], " ", 
+               RowBox[{"(", 
+                RowBox[{
+                 SuperscriptBox["g0I", "2"], "+", 
+                 SuperscriptBox["g0R", "2"]}], ")"}]}], "-", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}], 
+           ")"}], " ", 
+          RowBox[{"C", "[", "2", "]"}]}]}]}]}], "]"}]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.662964167608943*^9}]
 }, Open  ]]
 },
-WindowSize->{808, 655},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
+WindowSize->{1101, 655},
+WindowMargins->{{Automatic, -19}, {45, Automatic}},
+Magnification:>1.25 Inherited,
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
 StyleDefinitions->"Default.nb"
@@ -170,12 +670,28 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1392, 42, 63, "Input"],
-Cell[1975, 66, 1227, 37, 65, "Output"]
+Cell[580, 22, 1392, 42, 78, "Input"],
+Cell[1975, 66, 1227, 37, 81, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3239, 108, 123, 3, 28, "Input"],
-Cell[3365, 113, 1333, 38, 110, "Output"]
+Cell[3239, 108, 123, 3, 36, "Input"],
+Cell[3365, 113, 1333, 38, 91, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4735, 156, 606, 18, 36, "Input"],
+Cell[5344, 176, 769, 24, 63, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6150, 205, 1500, 46, 78, "Input"],
+Cell[7653, 253, 1220, 37, 42, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8910, 295, 266, 6, 36, "Input"],
+Cell[9179, 303, 6124, 169, 333, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15340, 477, 127, 2, 36, "Input"],
+Cell[15470, 481, 6124, 169, 391, "Output"]
 }, Open  ]]
 }
 ]
