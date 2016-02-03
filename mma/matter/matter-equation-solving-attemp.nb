@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22538,        691]
-NotebookOptionsPosition[     21610,        653]
-NotebookOutlinePosition[     22000,        670]
-CellTagsIndexPosition[     21957,        667]
+NotebookDataLength[     22725,        698]
+NotebookOptionsPosition[     21793,        660]
+NotebookOutlinePosition[     22187,        677]
+CellTagsIndexPosition[     22144,        674]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -226,7 +226,8 @@ Cell[BoxData[
          RowBox[{"Exp", "[", 
           RowBox[{"I", 
            RowBox[{"(", 
-            RowBox[{"omegam", "+", 
+            RowBox[{
+             RowBox[{"-", "omegam"}], "+", 
              RowBox[{"n0", " ", "k"}]}], ")"}], "x"}], "]"}]}]}], "}"}], ",", 
       
       RowBox[{"{", 
@@ -239,7 +240,8 @@ Cell[BoxData[
           RowBox[{
            RowBox[{"-", "I"}], 
            RowBox[{"(", 
-            RowBox[{"omegam", "+", 
+            RowBox[{
+             RowBox[{"-", "omegam"}], "+", 
              RowBox[{"n0", " ", "k"}]}], ")"}], "x"}], "]"}]}], ",", "0"}], 
        "}"}]}], "}"}], ".", 
     RowBox[{"{", 
@@ -249,7 +251,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.662958907001377*^9, 3.66295892756066*^9}, {
   3.662958969235578*^9, 3.6629589991603003`*^9}, {3.6629590342539*^9, 
   3.662959062327342*^9}, {3.6629591195238247`*^9, 3.6629591690016947`*^9}, {
-  3.6629592219339*^9, 3.662959229288431*^9}}],
+  3.6629592219339*^9, 3.662959229288431*^9}, {3.663434404042448*^9, 
+  3.6634344129750233`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -270,7 +273,7 @@ Cell[BoxData[
       RowBox[{"\[ImaginaryI]", " ", 
        RowBox[{"(", 
         RowBox[{
-         RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}]], " ", 
+         RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", "x"}]], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{"\[ImaginaryI]", " ", "g0I"}], "+", "g0R"}], ")"}], " ", 
@@ -281,14 +284,14 @@ Cell[BoxData[
        RowBox[{"-", "\[ImaginaryI]"}], " ", 
        RowBox[{"(", 
         RowBox[{
-         RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}]], " ", 
+         RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", "x"}]], " ", 
      RowBox[{"(", 
       RowBox[{
        RowBox[{
         RowBox[{"-", "\[ImaginaryI]"}], " ", "g0I"}], "+", "g0R"}], ")"}], 
      " ", 
      RowBox[{"phi1", "[", "x", "]"}]}]}], "}"}]}]], "Output",
- CellChangeTimes->{3.662959231550256*^9}]
+ CellChangeTimes->{3.662959231550256*^9, 3.663434420612898*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -316,7 +319,7 @@ Cell[BoxData[
            FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+             RowBox[{"k", " ", "n0"}], "+", 
              RowBox[{"\[ImaginaryI]", " ", 
               SqrtBox[
                RowBox[{
@@ -329,8 +332,8 @@ Cell[BoxData[
                 SuperscriptBox[
                  RowBox[{"(", 
                   RowBox[{
-                   RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                 "2"]}]]}]}], ")"}], " ", "x"}]], " ", 
+                   RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], 
+                 "2"]}]]}], "-", "omegam"}], ")"}], " ", "x"}]], " ", 
          RowBox[{"C", "[", "1", "]"}]}], "+", 
         RowBox[{
          SuperscriptBox["\[ExponentialE]", 
@@ -338,10 +341,6 @@ Cell[BoxData[
            FractionBox["1", "2"], " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"\[ImaginaryI]", " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
              SqrtBox[
               RowBox[{
                RowBox[{
@@ -353,8 +352,13 @@ Cell[BoxData[
                SuperscriptBox[
                 RowBox[{"(", 
                  RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}],
-             ")"}], " ", "x"}]], " ", 
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]], 
+             "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}], 
+           " ", "x"}]], " ", 
          RowBox[{"C", "[", "2", "]"}]}]}]}], "]"}]}], ",", 
     RowBox[{"phi2", "\[Rule]", 
      RowBox[{"Function", "[", 
@@ -374,13 +378,13 @@ Cell[BoxData[
              RowBox[{"-", "\[ImaginaryI]"}], " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", "x"}], 
             "+", 
             RowBox[{
              FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+               RowBox[{"k", " ", "n0"}], "+", 
                RowBox[{"\[ImaginaryI]", " ", 
                 SqrtBox[
                  RowBox[{
@@ -393,11 +397,11 @@ Cell[BoxData[
                   SuperscriptBox[
                    RowBox[{"(", 
                     RowBox[{
-                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                   "2"]}]]}]}], ")"}], " ", "x"}]}]], " ", 
+                    RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], 
+                   "2"]}]]}], "-", "omegam"}], ")"}], " ", "x"}]}]], " ", 
           RowBox[{"(", 
            RowBox[{
-            RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+            RowBox[{"k", " ", "n0"}], "+", 
             RowBox[{"\[ImaginaryI]", " ", 
              SqrtBox[
               RowBox[{
@@ -410,8 +414,8 @@ Cell[BoxData[
                SuperscriptBox[
                 RowBox[{"(", 
                  RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                "2"]}]]}]}], ")"}], " ", 
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]]}],
+             "-", "omegam"}], ")"}], " ", 
           RowBox[{"C", "[", "1", "]"}]}]}], "+", 
         RowBox[{
          FractionBox["1", 
@@ -423,19 +427,9 @@ Cell[BoxData[
           SuperscriptBox["\[ExponentialE]", 
            RowBox[{
             RowBox[{
-             RowBox[{"-", "\[ImaginaryI]"}], " ", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
-            "+", 
-            RowBox[{
              FractionBox["1", "2"], " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"\[ImaginaryI]", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
                SqrtBox[
                 RowBox[{
                  RowBox[{
@@ -447,14 +441,20 @@ Cell[BoxData[
                  SuperscriptBox[
                   RowBox[{"(", 
                    RowBox[{
-                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                  "2"]}]]}], ")"}], " ", "x"}]}]], " ", 
-          RowBox[{"(", 
-           RowBox[{
+                    RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]],
+                "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}],
+              " ", "x"}], "-", 
             RowBox[{"\[ImaginaryI]", " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", 
+             "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
             SqrtBox[
              RowBox[{
               RowBox[{
@@ -466,11 +466,16 @@ Cell[BoxData[
               SuperscriptBox[
                RowBox[{"(", 
                 RowBox[{
-                 RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}], 
-           ")"}], " ", 
+                 RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]], 
+            "+", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}], 
+          " ", 
           RowBox[{"C", "[", "2", "]"}]}]}]}]}], "]"}]}]}], "}"}], 
   "}"}]], "Output",
- CellChangeTimes->{3.662963634775683*^9}]
+ CellChangeTimes->{3.662963634775683*^9, 3.663434425093546*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -494,7 +499,7 @@ Cell[BoxData[
            FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+             RowBox[{"k", " ", "n0"}], "+", 
              RowBox[{"\[ImaginaryI]", " ", 
               SqrtBox[
                RowBox[{
@@ -507,8 +512,8 @@ Cell[BoxData[
                 SuperscriptBox[
                  RowBox[{"(", 
                   RowBox[{
-                   RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                 "2"]}]]}]}], ")"}], " ", "x"}]], " ", 
+                   RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], 
+                 "2"]}]]}], "-", "omegam"}], ")"}], " ", "x"}]], " ", 
          RowBox[{"C", "[", "1", "]"}]}], "+", 
         RowBox[{
          SuperscriptBox["\[ExponentialE]", 
@@ -516,10 +521,6 @@ Cell[BoxData[
            FractionBox["1", "2"], " ", 
            RowBox[{"(", 
             RowBox[{
-             RowBox[{"\[ImaginaryI]", " ", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
              SqrtBox[
               RowBox[{
                RowBox[{
@@ -531,8 +532,13 @@ Cell[BoxData[
                SuperscriptBox[
                 RowBox[{"(", 
                  RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}],
-             ")"}], " ", "x"}]], " ", 
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]], 
+             "+", 
+             RowBox[{"\[ImaginaryI]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}], 
+           " ", "x"}]], " ", 
          RowBox[{"C", "[", "2", "]"}]}]}]}], "]"}]}], ",", 
     RowBox[{"phi2", "\[Rule]", 
      RowBox[{"Function", "[", 
@@ -552,13 +558,13 @@ Cell[BoxData[
              RowBox[{"-", "\[ImaginaryI]"}], " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", "x"}], 
             "+", 
             RowBox[{
              FractionBox["1", "2"], " ", "\[ImaginaryI]", " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+               RowBox[{"k", " ", "n0"}], "+", 
                RowBox[{"\[ImaginaryI]", " ", 
                 SqrtBox[
                  RowBox[{
@@ -571,11 +577,11 @@ Cell[BoxData[
                   SuperscriptBox[
                    RowBox[{"(", 
                     RowBox[{
-                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                   "2"]}]]}]}], ")"}], " ", "x"}]}]], " ", 
+                    RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], 
+                   "2"]}]]}], "-", "omegam"}], ")"}], " ", "x"}]}]], " ", 
           RowBox[{"(", 
            RowBox[{
-            RowBox[{"k", " ", "n0"}], "+", "omegam", "+", 
+            RowBox[{"k", " ", "n0"}], "+", 
             RowBox[{"\[ImaginaryI]", " ", 
              SqrtBox[
               RowBox[{
@@ -588,8 +594,8 @@ Cell[BoxData[
                SuperscriptBox[
                 RowBox[{"(", 
                  RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                "2"]}]]}]}], ")"}], " ", 
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]]}],
+             "-", "omegam"}], ")"}], " ", 
           RowBox[{"C", "[", "1", "]"}]}]}], "+", 
         RowBox[{
          FractionBox["1", 
@@ -601,19 +607,9 @@ Cell[BoxData[
           SuperscriptBox["\[ExponentialE]", 
            RowBox[{
             RowBox[{
-             RowBox[{"-", "\[ImaginaryI]"}], " ", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], " ", "x"}], 
-            "+", 
-            RowBox[{
              FractionBox["1", "2"], " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"\[ImaginaryI]", " ", 
-                RowBox[{"(", 
-                 RowBox[{
-                  RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
                SqrtBox[
                 RowBox[{
                  RowBox[{
@@ -625,14 +621,20 @@ Cell[BoxData[
                  SuperscriptBox[
                   RowBox[{"(", 
                    RowBox[{
-                    RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], 
-                  "2"]}]]}], ")"}], " ", "x"}]}]], " ", 
-          RowBox[{"(", 
-           RowBox[{
+                    RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]],
+                "+", 
+               RowBox[{"\[ImaginaryI]", " ", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}],
+              " ", "x"}], "-", 
             RowBox[{"\[ImaginaryI]", " ", 
              RowBox[{"(", 
               RowBox[{
-               RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}]}], "+", 
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], " ", 
+             "x"}]}]], " ", 
+          RowBox[{"(", 
+           RowBox[{
             SqrtBox[
              RowBox[{
               RowBox[{
@@ -644,15 +646,20 @@ Cell[BoxData[
               SuperscriptBox[
                RowBox[{"(", 
                 RowBox[{
-                 RowBox[{"k", " ", "n0"}], "+", "omegam"}], ")"}], "2"]}]]}], 
-           ")"}], " ", 
+                 RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}], "2"]}]], 
+            "+", 
+            RowBox[{"\[ImaginaryI]", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"k", " ", "n0"}], "-", "omegam"}], ")"}]}]}], ")"}], 
+          " ", 
           RowBox[{"C", "[", "2", "]"}]}]}]}]}], "]"}]}]}], "}"}], 
   "}"}]], "Output",
- CellChangeTimes->{3.662964167608943*^9}]
+ CellChangeTimes->{3.662964167608943*^9, 3.663434426862656*^9}]
 }, Open  ]]
 },
 WindowSize->{1101, 655},
-WindowMargins->{{Automatic, -19}, {45, Automatic}},
+WindowMargins->{{-1373, Automatic}, {Automatic, -111}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
 2014)",
@@ -670,8 +677,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1392, 42, 78, "Input"],
-Cell[1975, 66, 1227, 37, 81, "Output"]
+Cell[580, 22, 1392, 42, 57, "Input"],
+Cell[1975, 66, 1227, 37, 78, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[3239, 108, 123, 3, 36, "Input"],
@@ -682,16 +689,16 @@ Cell[4735, 156, 606, 18, 36, "Input"],
 Cell[5344, 176, 769, 24, 63, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6150, 205, 1500, 46, 78, "Input"],
-Cell[7653, 253, 1220, 37, 42, "Output"]
+Cell[6150, 205, 1609, 49, 78, "Input"],
+Cell[7762, 256, 1242, 37, 42, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8910, 295, 266, 6, 36, "Input"],
-Cell[9179, 303, 6124, 169, 333, "Output"]
+Cell[9041, 298, 266, 6, 36, "Input"],
+Cell[9310, 306, 6150, 171, 333, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[15340, 477, 127, 2, 36, "Input"],
-Cell[15470, 481, 6124, 169, 391, "Output"]
+Cell[15497, 482, 127, 2, 36, "Input"],
+Cell[15627, 486, 6150, 171, 333, "Output"]
 }, Open  ]]
 }
 ]
