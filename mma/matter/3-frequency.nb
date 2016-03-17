@@ -1,0 +1,174 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5213,        165]
+NotebookOptionsPosition[      4524,        135]
+NotebookOutlinePosition[      4879,        151]
+CellTagsIndexPosition[      4836,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["3-Frequency Matter Perturbation", "Title",
+ CellChangeTimes->{{3.66716205976786*^9, 3.6671620701508417`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Prepare", "Subchapter",
+ CellChangeTimes->{3.667061735803423*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"imgsize", "=", "700"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6655078731783953`*^9, 3.665507876793908*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "@", 
+  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
+ CellChangeTimes->{{3.665507862529501*^9, 3.665507869275292*^9}}],
+
+Cell[BoxData["\<\"/Users/leima/GitHub/NeuPhysics/codebase/mma/matter\"\>"], \
+"Output",
+ CellChangeTimes->{{3.665507869758006*^9, 3.665507879563505*^9}, 
+   3.665535326668756*^9, 3.665599960840906*^9, 3.665604387275487*^9, 
+   3.665604702325037*^9, 3.665605052791039*^9, {3.6656071036132936`*^9, 
+   3.6656071231481533`*^9}, 3.665607562606222*^9, 3.666396917537895*^9, 
+   3.666468986815325*^9, 3.667061741419808*^9, 3.667064046637022*^9, {
+   3.6670675232264338`*^9, 3.667067543374548*^9}, 3.667072505669414*^9, 
+   3.6670726101969967`*^9, 3.667144855233493*^9, 3.667150849286459*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ClearAll", "[", 
+   RowBox[{
+   "n1M", ",", "n2M", ",", "k1M", ",", "k2M", ",", "a1M", ",", "a2M", ",", 
+    "phaseList", ",", "coeffList", ",", "coeffListRe", ",", "coeffListIm", 
+    ",", "coeffListAbs", ",", "list0", ",", "list1", ",", "list2", ",", 
+    "list3", ",", "list4", ",", "n2List1", ",", "n1List2", ",", "n2List3", 
+    ",", "n1List4", ",", "meshStyle", ",", "parList", ",", "k1A", ",", "k2A", 
+    ",", "a1A", ",", "a2A", ",", "range", ",", "range2"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.665535192218771*^9, 3.6655352535530024`*^9}, {
+  3.6671463324674063`*^9, 3.667146333360815*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<../../neuPackage/neutrino.wl\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.665604680958543*^9, 3.665604708562948*^9}, {
+   3.665604742285881*^9, 3.6656047425723343`*^9}, 3.6656047801703587`*^9, {
+   3.665607448796229*^9, 3.6656074490901213`*^9}, {3.665607520916416*^9, 
+   3.665607549959999*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Parameters", "Subchapter",
+ CellChangeTimes->{{3.6655359709076223`*^9, 3.6655359721540737`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"thetamV", "=", 
+   RowBox[{"Pi", "/", "5"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k1V", "=", "1.3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k2V", "=", "0.7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"k3V", "=", "0.4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a1V", "=", "0.1"}], 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"0.1", 
+     RowBox[{
+      RowBox[{"(", "k1V", ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "5"}], "/", "3"}], ")"}]}]}], ";"}], "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a2V", "=", "0.1"}], 
+  RowBox[{"(*", 
+   RowBox[{"0.1", 
+    RowBox[{
+     RowBox[{"(", "k2V", ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "5"}], "/", "3"}], ")"}]}]}], "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a3V", "=", "0.1"}], 
+  RowBox[{"(*", 
+   RowBox[{"0.1", 
+    RowBox[{
+     RowBox[{"(", "k3V", ")"}], "^", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "5"}], "/", "3"}], ")"}]}]}], "*)"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phi1V", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phi2V", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"phi3V", "=", "0"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.665509349280545*^9, 3.665509360512389*^9}, {
+  3.6655114211532803`*^9, 3.6655114692238283`*^9}, {3.6666237863901167`*^9, 
+  3.666623786716338*^9}, {3.6666238537733717`*^9, 3.666623879909234*^9}, {
+  3.667080161790339*^9, 3.667080189001976*^9}, {3.667162083272607*^9, 
+  3.667162121693972*^9}}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 655},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 115, 1, 92, "Title"],
+Cell[CellGroupData[{
+Cell[720, 27, 71, 1, 62, "Subchapter"],
+Cell[794, 30, 143, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[962, 37, 165, 3, 28, "Input"],
+Cell[1130, 42, 585, 8, 28, "Output"]
+}, Open  ]],
+Cell[1730, 53, 648, 12, 63, "Input"],
+Cell[2381, 67, 335, 5, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2753, 77, 102, 1, 62, "Subchapter"],
+Cell[2858, 80, 1638, 51, 182, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
