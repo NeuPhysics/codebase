@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[35]:
+# In[ ]:
 
 import numpy as np
 from scipy.integrate import odeint
@@ -9,7 +9,7 @@ from scipy.integrate import ode
 import matplotlib.pylab as plt
 
     
-endpoint = 1000; # integration range
+endpoint = 10000000; # integration range
 dx = 10.0; # step size
 lam0 = 0.845258; # in unit of omegam, omegam = 3.66619*10^-17
 dellam = np.array([0.00003588645221954444, 0.06486364865874367]); # deltalambda/omegam
@@ -19,7 +19,7 @@ thm = 0.16212913985547778; # theta_m
 
 psi0, x0 = [1.0+0.j, 0.0], 0
 
-savestep = 10;
+savestep = 1000;
 
 xlin = np.arange(dx,endpoint+1*dx, dx)
 
