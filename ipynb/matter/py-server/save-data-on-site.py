@@ -22,15 +22,15 @@ psi = np.zeros([len(xlin)  , 2], dtype='complex_')
 
 xlinsave = np.zeros(len(xlin)/savestep);
 psisave = np.zeros([len(xlinsave)  , 2], dtype='complex_')
-probsave = np.zeros([len(xlinsave)  , 2])
+probsave = np.zeros([len(xlinsave)  , 3])
 
 
 def hamiltonian(x, deltalambda, k, thetam):
-    
+
     return [[ 0,   0.5* np.sin(2*thetam) * ( deltalambda[0] * np.sin(k[0]*x) + deltalambda[1] * np.sin(k[1]*x) ) * np.exp( 1.0j * ( - x - np.cos(2*thetam) * (  ( deltalambda[0]/k[0] * np.cos(k[0]*x) + deltalambda[1]/k[1] * np.cos(k[1]*x) ) )  ) )     ],   [ 0.5* np.sin(2*thetam) * ( deltalambda[0] * np.sin(k[0]*x) + deltalambda[1] * np.sin(k[1]*x) ) * np.exp( -1.0j * ( - x - np.cos(2*thetam) * ( deltalambda[0] /k[0] * np.cos(k[0]*x) + deltalambda[1] /k[1] * np.cos(k[1]*x) )  ) ), 0 ]]   # Hamiltonian for double frequency
 
 def deripsi(t, psi, deltalambda, k , thetam):
-    
+
     return -1.0j * np.dot( hamiltonian(t, deltalambda,k,thetam), [psi[0], psi[1]] )
 
 
@@ -48,13 +48,13 @@ print timestampstr
 while sol.successful() and sol.t < endpoint:
     sol.integrate(xlin[flag])
     if np.mod(flag,savestep)==0:
-        probsave[flagsave] = [sol.t, np.absolute(sol.y[1])**2]
-        
+        probsave[flagsave] = [sol.t, np.absolute(sol.y[1])**2, np.absolute(sol.y[0])**2]
+
         with open(r'probtrans-test-'+timestampstr+'.csv', 'a') as f_handle:
             np.savetxt(f_handle, probsave[flagsave])
-    
+
         flagsave = flagsave + 1
-        
+
     flag = flag + 1
 
 
