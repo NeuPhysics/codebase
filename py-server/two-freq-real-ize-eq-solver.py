@@ -7,8 +7,8 @@ import time
 
 
 
-endpoint = 1000000; # integration range
-dx = 1.0; # step size
+endpoint = 10000000; # integration range
+dx = 100.0; # step size
 lam0 = 0.845258; # in unit of omegam, omegam = 3.66619*10^-17
 dellam = np.array([0.00003588645221954444, 0.06486364865874367]); # deltalambda/omegam
 ks = [1.0,1.0/90]; # two k's
@@ -47,7 +47,7 @@ prob1=solodeint[0][:,1]**2+solodeint[0][:,3]**2
 
 np.save("assets/two-freq-real-ize-xlin-"+str(endpoint)+"-"+str(dx),xlin)
 np.save("assets/two-freq-real-ize-prob0-"+str(endpoint)+"-"+str(dx),prob0)
-np.save("assets/two-freq-real-ize-prob1-"+str(endpoint)+"-"+str(dx),prob0)
+np.save("assets/two-freq-real-ize-prob1-"+str(endpoint)+"-"+str(dx),prob1)
 
 print solodeint[1]['message']
 
