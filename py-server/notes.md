@@ -18,5 +18,5 @@ psi0, x0 = [1.0, 0.0, 0.0, 0.0], 0 # initial condition
 #### Output
 
 1. `two-freq-real-ize-prob0-1000-1.0.npy` and `two-freq-real-ize-prob1-1000-1.0.npy` are the output as a test of `two-freq-real-ize-eq-solver.py`.
-
+2. `two-freq-real-ize-eq-solver-1e7-step-10-with-tol-func-input-1e-4.out` is the result for range 1e7, stepsize 10, relative tol rtol set using tol function which has input 1e-4 (the total maximum error required)
 

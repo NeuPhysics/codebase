@@ -7,15 +7,14 @@ import time
 
 
 
-endpoint = 100000000; # integration range
-dx = 100.0; # step size
+endpoint = 10000000; # integration range
+dx = 10.0; # step size
 lam0 = 0.845258; # in unit of omegam, omegam = 3.66619*10^-17
 dellam = np.array([0.00003588645221954444, 0.06486364865874367]); # deltalambda/omegam
 ks = [1.0,1.0/90]; # two k's
 thm = 0.16212913985547778; # theta_m
 
 psi0, x0 = [1.0, 0.0, 0.0, 0.0], 0 # initial condition
-savestep = 1000; # save to file every savestep steps
 
 
 def hamiltonian(x, deltalambda, k, thetam):
