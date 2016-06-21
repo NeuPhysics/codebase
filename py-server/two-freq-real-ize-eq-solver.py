@@ -53,3 +53,5 @@ np.save("assets/two-freq-real-ize-prob1-"+str(endpoint)+"-"+str(dx),prob1)
 
 print solodeint[1]['message']
 print solodeint[0][-1], xlin[-1]
+print "step size is"+str(dx)
+print "rtol_req is"+str(rtol_req)
